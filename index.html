@@ -6,7 +6,7 @@
   <title>InfoGamerWeb</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="max-w-xl mx-auto border border-black min-h-dvh bg-gradient-to-b from-teal-950 via-sky-950 to-gray-700 p-4">
+<body class="flex flex-col border-black min-h-dvh bg-gradient-to-b from-teal-950 via-sky-950 to-gray-700 p-4">
   <header class="text-white">
     <header class="flex flex-col items-center gap-2 p-4">
       <img src="./assets/info-gamer-logo.png" alt="Logo de InfoGamerWeb" class="h-[70vh] object-cover mask-radial-at-center mask-radial-from-45% mask-radial-to-60%"/>
@@ -19,7 +19,7 @@
         <use xlink:href="./assets/sprite.svg#twitch"></use>
         </svg>
       </a> 
-      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/@illojuan" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
+      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/watch?v=6YsNRnZRgg8&list=RD6YsNRnZRgg8&start_radio=1" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
         <svg width="50" height="50">
         <use xlink:href="./assets/sprite.svg#youtube"></use>
         </svg>
@@ -39,30 +39,30 @@
       <a href="#" class="text-white hover:underline">Videos</a>
       <a href="#" class="text-white hover:underline">Guias</a>
     </nav>
-    <div class="">
-      <h2 class="text-white">Noticias</h2>
-      <section class="flex flex-col gap-4">
-        <article class="flex">
+    <div class="flex flex-col gap-2">
+      <h2 class="text-white text-xl font-bold">Noticias</h2>
+      <section class="flex flex-col gap-4 p-4">
+        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
           <img src="./assets/games/silksong.png" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div class="flex flex-col justify-between">
+          <div class="flex flex-col justify-stretch gap-4">
             <h3 class="text-white text-xl font-bold">Nuevo DLC Gratis para Hollow Knight Silksong</h3>
             <p class="text-white">El juego mas jugado en las ultimas semanas sorprende a todos con un nuevo DLC gratis.</p>
           </div>
-        </article>
-        <article class="flex">
+        </a>
+        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
           <img src="./assets/games/megabonk.jpg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div class="flex flex-col justify-between">
+          <div class="flex flex-col justify-stretch gap-4">
             <h3 class="text-white text-xl font-bold">Megabonk, un indie que sorprende hasta a Alexelcapo</h3>
             <p class="text-white">Un juego indie de la tematica "survivors" que tiene al mismisimo Alexelcapo enganchado</p>
           </div>
-        </article>
-        <article class="flex">
+        </a>
+        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
           <img src="./assets/games/aistopu.jpeg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div class="flex flex-col justify-between">
-            <h3 class="text-white text-xl font-bold">Nuevas politicas de Visa/Mastercard hacen que 1000 juegos salgan de Steam</h3>
+          <div class="flex flex-col justify-stretch gap-4">
+            <h3 class="text-white text-xl font-bold">Visa y Mastercard hacen que 1000 juegos salgan de Steam</h3>
             <p class="text-white">Una ultima polemica a surgido que hizo que el juego favorito de BaityBait salga de Steam</p>
           </div>
-        </article>
+        </a>
       </section>
     </div>
 </body>
