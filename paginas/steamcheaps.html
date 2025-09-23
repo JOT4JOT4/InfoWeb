@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoGamerWeb</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./css/ofertas_estilos.css">
+</head>
+<body class="flex flex-col border-black min-h-dvh bg-gradient-to-b from-teal-950 via-sky-950 to-gray-700 p-4">
+  <header class="text-white">
+    <header class="flex flex-col items-center gap-2 p-4">
+      <img id="logo-picture" src="../assets/info-gamer-logo.png" alt="Logo de InfoGamerWeb" class="h-[70vh] object-cover mask-radial-at-center mask-radial-from-45% mask-radial-to-60%"/>
+      <h1 class="text-3xl font-bold">Info Gamer Web</h1>
+      <p class="text-center">Tu fuente confiable para noticias y actualizaciones sobre videojuegos, tecnología y cultura geek.</p>
+    </header>
+    <section class="flex gap-4 p-2 justify-center">
+      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.twitch.tv/illojuan" target="_blank" aria-label="Twitch" title=" Ir a Twitch">
+        <svg width="50" height="50">
+        <use xlink:href="../assets/sprite.svg#twitch"></use>
+        </svg>
+      </a> 
+      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/watch?v=6YsNRnZRgg8&list=RD6YsNRnZRgg8&start_radio=1" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
+        <svg width="50" height="50">
+        <use xlink:href="../assets/sprite.svg#youtube"></use>
+        </svg>
+      </a>
+      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.instagram.com/illojuan/" target="_blank" aria-label="Instagram" title=" Ir a Instagram">
+        <svg width="50" height="50">
+        <use xlink:href="../assets/sprite.svg#instagram"></use>
+        </svg>
+      </a>
+    </section>
+  </header>
+  <div class="main-content">
+    <nav class="flex justify-center gap-4 mb-6">
+      <a href="../index.html" class="text-white hover:underline">Inicio</a>
+      <a href="../index.html" class="text-white hover:underline">Noticias</a>
+      <a href="#" class="text-white hover:underline">Ofertas</a>
+      <a href="./videos.html" class="text-white hover:underline">Videos</a>
+      <a href="./guides.html" class="text-white hover:underline">Guias</a>
+    </nav>
+    <div class="flex flex-col gap-2">
+        <h2 class="text-white font-bold">Ofertas Actuales</h2>
+        <section id="section-offert" class="offers-section flex gap-2 p-4 justify-center flex-wrap">
+            <a class="offer-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Ofertas de videojuegos">
+                <div class="relative">
+                    <img id="content-offert-img" src="../assets/steamdeals/ER_nightreign.jpg" alt="Ofertas de videojuegos" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
+                        20%
+                    </span>
+                </div>
+                <div id="content-offert-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Elden Ring: Nightreign</h3>
+                </div>
+            </a>
+            <a class="offer-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Ofertas de videojuegos">
+                <div class="relative">
+                    <img id="content-offert-img" src="../assets/steamdeals/Terraria.jpg" alt="Ofertas de videojuegos" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
+                        80%
+                    </span>
+                </div>
+                <div id="content-offert-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Terraria</h3>
+                </div>
+            </a>
+            <a class="offer-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Ofertas de videojuegos">
+                <div class="relative">
+                    <img id="content-offert-img" src="../assets/steamdeals/megabonk.jpg" alt="Ofertas de videojuegos" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
+                        50%
+                    </span>
+                </div>
+                <div id="content-offert-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Megabonk</h3>
+                </div>
+            </a>
+            <a class="offer-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Ofertas de videojuegos">
+                <div class="relative">
+                    <img id="content-offert-img" src="../assets/steamdeals/silksong.png" alt="Ofertas de videojuegos" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
+                        10%
+                    </span>
+                </div>
+                <div id="content-offert-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Silksong</h3>
+                </div>
+            </a>
+        </section>
+    </div>
+</body>
+</html>
