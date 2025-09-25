@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InfoGamerWeb - Monster Hunter</title>
+  <title>Monster Hunter - Datos Monstruos</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./css/estilos.css">
 </head>
@@ -39,21 +39,13 @@
       <a href="./steamcheaps.html" class="text-white hover:underline">Ofertas</a>
       <a href="./videos.html" class="text-white hover:underline">Videos</a>
       <a href="./guides.html" class="text-white hover:underline">Guias</a>
+      <a href="./monsterhunter.html" class="text-white hover:underline">Monster Hunter</a>
     </nav>
     <div class="flex flex-col gap-2 items-center">
-        <h2 class="text-white font-bold text-2xl mb-4">Info Monster Hunter</h2>
-        <section class="flex gap-6 p-4 justify-center flex-wrap">
-            <a class="bg-blue-200 hover:bg-blue-300 transition-colors rounded-xl shadow-lg p-6 flex flex-col items-center w-64" href="./monsterhunter_monsters.html">
-                <img src="../assets/guides/monsterhunter.jpg" alt="Datos Monstruos" class="h-32 w-48 object-cover rounded-lg mb-2"/>
-                <span class="text-blue-900 font-bold text-lg">Datos Monstruos</span>
-                <p class="text-gray-700 text-center mt-2">Consulta información y estadísticas de los monstruos.</p>
-            </a>
-            <a class="bg-green-200 hover:bg-green-300 transition-colors rounded-xl shadow-lg p-6 flex flex-col items-center w-64" href="#">
-                <img src="../assets/guides/monsterhunter.jpg" alt="Guía contra ..." class="h-32 w-48 object-cover rounded-lg mb-2"/>
-                <span class="text-green-900 font-bold text-lg">Guía contra ...</span>
-                <p class="text-gray-700 text-center mt-2">Estrategias y consejos para vencer a un monstruo específico.</p>
-            </a>
-        </section>
+        <h2 class="text-white font-bold text-2xl mb-4">Datos de Monstruos</h2>
+        <div id="monster-list" class="w-full flex flex-wrap gap-4 justify-center"></div>
     </div>
+  </div>
+  <script src="./js/monsterhunter_monsters.js"></script>
 </body>
 </html>
