@@ -10,24 +10,24 @@
 <body class="flex flex-col border-black min-h-dvh bg-gradient-to-b from-teal-950 via-sky-950 to-gray-700 p-4">
   <header class="text-white">
     <header class="flex flex-col items-center gap-2 p-4">
-      <img id="logo-picture" src="./assets/info-gamer-logo.png" alt="Logo de InfoGamerWeb" class="h-[70vh] object-cover mask-radial-at-center mask-radial-from-45% mask-radial-to-60%"/>
+      <img id="logo-picture" src="../assets/info-gamer-logo.png" alt="Logo de InfoGamerWeb" class="h-[70vh] object-cover mask-radial-at-center mask-radial-from-45% mask-radial-to-60%"/>
       <h1 class="text-3xl font-bold">Info Gamer Web</h1>
       <p class="text-center">Tu fuente confiable para noticias y actualizaciones sobre videojuegos, tecnología y cultura geek.</p>
     </header>
     <section class="flex gap-4 p-2 justify-center">
       <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.twitch.tv/illojuan" target="_blank" aria-label="Twitch" title=" Ir a Twitch">
         <svg width="50" height="50">
-        <use xlink:href="./assets/sprite.svg#twitch"></use>
+        <use xlink:href="../assets/sprite.svg#twitch"></use>
         </svg>
       </a> 
       <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/watch?v=6YsNRnZRgg8&list=RD6YsNRnZRgg8&start_radio=1" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
         <svg width="50" height="50">
-        <use xlink:href="./assets/sprite.svg#youtube"></use>
+        <use xlink:href="../assets/sprite.svg#youtube"></use>
         </svg>
       </a>
       <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.instagram.com/illojuan/" target="_blank" aria-label="Instagram" title=" Ir a Instagram">
         <svg width="50" height="50">
-        <use xlink:href="./assets/sprite.svg#instagram"></use>
+        <use xlink:href="../assets/sprite.svg#instagram"></use>
         </svg>
       </a>
     </section>
@@ -37,34 +37,57 @@
       <a href="../index.html" class="text-white hover:underline">Inicio</a>
       <a href="../index.html" class="text-white hover:underline">Noticias</a>
       <a href="./steamcheaps.html" class="text-white hover:underline">Ofertas</a>
-      <a href="./paginas/videos.html" class="text-white hover:underline">Videos</a>
+      <a href="./videos.html" class="text-white hover:underline">Videos</a>
       <a href="#" class="text-white hover:underline">Guias</a>
     </nav>
     <div class="flex flex-col gap-2">
-      <h2 class="text-white font-bold">Noticias</h2>
-      <section id="section-id" class="flex flex-col gap-4 p-4">
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/silksong.png" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Nuevo DLC Gratis para Hollow Knight Silksong</h3>
-            <p class="text-white">El juego mas jugado en las ultimas semanas sorprende a todos con un nuevo DLC gratis.</p>
-          </div>
-        </a>
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/megabonk.jpg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Megabonk, un indie que sorprende hasta a Alexelcapo</h3>
-            <p class="text-white">Un juego indie de la tematica "survivors" que tiene al mismisimo Alexelcapo enganchado</p>
-          </div>
-        </a>
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/aris.jpeg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Visa y Mastercard hacen que 1000 juegos salgan de Steam</h3>
-            <p class="text-white">Una ultima polemica que a surgido hace que el juego favorito de BaityBait salga de Steam</p>
-          </div>
-        </a>
-      </section>
+        <h2 class="text-white font-bold">Guías Destacadas</h2>
+        <section id="section-guides" class="guides-section flex gap-2 p-4 justify-center flex-wrap">
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Hollow Knight Silksong">
+                <div class="relative">
+                    <img id="content-guide-img" src="../assets/games/silksong.png" alt="Guía de Hollow Knight Silksong" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-blue-300 border-2 border-blue-600 rounded-lg px-2 py-1 text-blue-900 font-bold text-lg shadow-lg">
+                        Principiante
+                    </span>
+                </div>
+                <div id="content-guide-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Guía Completa: Hollow Knight Silksong</h3>
+                </div>
+            </a>
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Terraria">
+                <div class="relative">
+                    <img id="content-guide-img" src="../assets/guides/Terraria.jpg" alt="Guía de Terraria" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-green-300 border-2 border-green-600 rounded-lg px-2 py-1 text-green-900 font-bold text-lg shadow-lg">
+                        Avanzado
+                    </span>
+                </div>
+                <div id="content-guide-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Terraria: Trucos y Consejos</h3>
+                </div>
+            </a>
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="./monsterhunter.html" title="Guía de Megabonk">
+                <div class="relative">
+                    <img id="content-guide-img" src="../assets/guides/monsterhunter.jpg" alt="Guía de Megabonk" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-yellow-900 font-bold text-lg shadow-lg">
+                        Intermedio
+                    </span>
+                </div>
+                <div id="content-guide-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Info Monster Hunter</h3>
+                </div>
+            </a>
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Elden Ring">
+                <div class="relative">
+                    <img id="content-guide-img" src="../assets/guides/eldenring_guide.jpg" alt="Guía de Elden Ring" class="h-32 w-64 self-center"/>
+                    <span class="absolute bottom-2 right-2 bg-red-300 border-2 border-red-600 rounded-lg px-2 py-1 text-red-900 font-bold text-lg shadow-lg">
+                        Experto
+                    </span>
+                </div>
+                <div id="content-guide-text" class="flex justify-center">
+                    <h3 class="text-white font-bold">Elden Ring: Secretos y Estrategias</h3>
+                </div>
+            </a>
+        </section>
     </div>
 </body>
 </html>
