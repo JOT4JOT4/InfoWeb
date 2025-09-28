@@ -5,8 +5,9 @@
         height: 16vh;
     }
 
-    #logo-picture {
+    .logo-picture {
         height: 30vh;
+        object-fit: cover;
 
     }
 
@@ -34,8 +35,10 @@
         height: 16vh;
     }
 
-    #logo-picture {
-        height: 40vh;
+    .logo-picture {
+        height: 45vh;
+        object-fit: cover;
+
     }
 
     #section-id {
@@ -63,8 +66,10 @@
         height: 32vh;
     }
 
-    #logo-picture {
+    .logo-picture {
         height: 60vh;
+        object-fit: cover;
+
     }
 
     #section-id {
