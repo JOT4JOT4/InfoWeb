@@ -36,6 +36,16 @@
     </nav>
     <div class="flex flex-col gap-2 items-center">
         <h2 class="text-white font-bold text-2xl mb-4">Datos de Monstruos</h2>
+        <!-- Barra de búsqueda y filtros -->
+        <div class="w-full max-w-4xl mb-6 flex flex-wrap gap-4 justify-center items-center bg-white/20 rounded-xl p-4 shadow-lg">
+          <input id="search-name" type="text" placeholder="Buscar por nombre..." class="rounded-lg p-2 w-56 bg-white/80 text-black focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <select id="filter-type" class="rounded-lg p-2 w-40 bg-white/80 text-black focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <option value="">Todos los tipos</option>
+          </select>
+          <select id="filter-element" class="rounded-lg p-2 w-40 bg-white/80 text-black focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <option value="">Todos los elementos</option>
+          </select>
+        </div>
         <div id="monster-list" class="w-full flex flex-wrap gap-4 justify-center"></div>
     </div>
   </div>
