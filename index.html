@@ -6,6 +6,7 @@
   <title>InfoGamerWeb</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./css/estilos.css">
+  <script src="/paginas/js/noticias.js"></script>
 </head>
 <body class="flex flex-col border-black min-h-dvh bg-gradient-to-b from-teal-950 via-sky-950 to-gray-700 p-4">
   <header class="text-white">
@@ -31,33 +32,12 @@
       <a href="#" class="text-white hover:underline">Inicio</a>
       <a href="#" class="text-white hover:underline">Noticias</a>
       <a href="./paginas/steamcheaps.html" class="text-white hover:underline">Ofertas</a>
-      <a href="./paginas/videos.html" class="text-white hover:underline">Videos</a>
       <a href="./paginas/guides.html" class="text-white hover:underline">Guias</a>
     </nav>
     <div class="flex flex-col gap-2">
       <h2 class="text-white font-bold">Noticias</h2>
       <section id="section-id" class="flex flex-col gap-4 p-4">
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/silksong.png" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Nuevo DLC Gratis para Hollow Knight Silksong</h3>
-            <p class="text-white">El juego mas jugado en las ultimas semanas sorprende a todos con un nuevo DLC gratis.</p>
-          </div>
-        </a>
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/megabonk.jpg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Megabonk, un indie que sorprende hasta a Alexelcapo</h3>
-            <p class="text-white">Un juego indie de la tematica "survivors" que tiene al mismisimo Alexelcapo enganchado</p>
-          </div>
-        </a>
-        <a class="flex hover:scale-105 transition-transform" href="#" title="Noticia de videojuego">
-          <img id="content-img" src="./assets/games/aris.jpeg" alt="Noticia de videojuego" class="h-[24vh] p-1 object-cover rounded-lg mr-6"/>
-          <div id="content-text" class="flex flex-col justify-stretch">
-            <h3 class="text-white font-bold">Visa y Mastercard hacen que 1000 juegos salgan de Steam</h3>
-            <p class="text-white">Una ultima polemica que a surgido hace que el juego favorito de BaityBait salga de Steam</p>
-          </div>
-        </a>
+        <!-- Los posts se cargarán aquí dinámicamente -->
       </section>
     </div>
 </body>
