@@ -15,20 +15,14 @@
       <p class="text-center">Tu fuente confiable para noticias y actualizaciones sobre videojuegos, tecnología y cultura geek.</p>
     </header>
     <section class="flex gap-4 p-2 justify-center">
-      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.twitch.tv/illojuan" target="_blank" aria-label="Twitch" title=" Ir a Twitch">
-        <svg width="50" height="50">
-        <use xlink:href="../assets/sprite.svg#twitch"></use>
-        </svg>
+      <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.twitch.tv/illojuan" target="_blank" aria-label="Twitch" title=" Ir a Twitch">
+         <img src="../assets/twitch.png" alt="Twitch" class="w-8 h-8 object-contain">
       </a> 
-      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/watch?v=6YsNRnZRgg8&list=RD6YsNRnZRgg8&start_radio=1" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
-        <svg width="50" height="50">
-        <use xlink:href="../assets/sprite.svg#youtube"></use>
-        </svg>
-      </a>
-      <a class="bg-purple-100 p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.instagram.com/illojuan/" target="_blank" aria-label="Instagram" title=" Ir a Instagram">
-        <svg width="50" height="50">
-        <use xlink:href="../assets/sprite.svg#instagram"></use>
-        </svg>
+         <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.youtube.com/watch?v=6YsNRnZRgg8&list=RD6YsNRnZRgg8&start_radio=1" target="_blank" aria-label="YouTube" title=" Ir a YouTube">
+      <img src="../assets/youtube.png" alt="YouTube" class="w-10 h-10 object-contain">
+         </a>
+      <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-105 transition-transform" href="https://www.instagram.com/illojuan/" target="_blank" aria-label="Instagram" title=" Ir a Instagram">
+         <img src="../assets/instagram.png" alt="Instagram" class="w-8 h-8 object-contain">
       </a>
     </section>
   </header>
@@ -43,26 +37,26 @@
     <div class="flex flex-col gap-2">
         <h2 class="text-white font-bold">Guías Destacadas</h2>
         <section id="section-guides" class="guides-section flex gap-2 p-4 justify-center flex-wrap">
-            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Hollow Knight Silksong">
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="./DnD_monster.html" title="Guía de Hollow Knight Silksong">
                 <div class="relative">
-                    <img id="content-guide-img" src="../assets/games/silksong.png" alt="Guía de Hollow Knight Silksong" class="h-32 w-64 self-center"/>
+                    <img id="content-guide-img" src="../assets/guides/dnd.jpg" alt="Guía de Hollow Knight Silksong" class="h-32 w-64 self-center"/>
                     <span class="absolute bottom-2 right-2 bg-blue-300 border-2 border-blue-600 rounded-lg px-2 py-1 text-blue-900 font-bold text-lg shadow-lg">
                         Principiante
                     </span>
                 </div>
                 <div id="content-guide-text" class="flex justify-center">
-                    <h3 class="text-white font-bold">Guía Completa: Hollow Knight Silksong</h3>
+                    <h3 class="text-white font-bold">Guía de Monstruos: 5e</h3>
                 </div>
             </a>
-            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Terraria">
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="./pokemon_berrys.html" title="Guía de Terraria">
                 <div class="relative">
-                    <img id="content-guide-img" src="../assets/guides/Terraria.jpg" alt="Guía de Terraria" class="h-32 w-64 self-center"/>
+                    <img id="content-guide-img" src="../assets/guides/berrys.jpg" alt="Guía de Terraria" class="h-32 w-64 self-center"/>
                     <span class="absolute bottom-2 right-2 bg-green-300 border-2 border-green-600 rounded-lg px-2 py-1 text-green-900 font-bold text-lg shadow-lg">
                         Avanzado
                     </span>
                 </div>
                 <div id="content-guide-text" class="flex justify-center">
-                    <h3 class="text-white font-bold">Terraria: Trucos y Consejos</h3>
+                    <h3 class="text-white font-bold">Pokemon: lista de berrys</h3>
                 </div>
             </a>
             <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="./monsterhunter.html" title="Guía de Megabonk">
@@ -76,7 +70,7 @@
                     <h3 class="text-white font-bold">Info Monster Hunter</h3>
                 </div>
             </a>
-            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="#" title="Guía de Elden Ring">
+            <a class="guide-card flex flex-col hover:scale-105 transition-transform relative" href="./eldenring_items.html" title="Guía de Elden Ring">
                 <div class="relative">
                     <img id="content-guide-img" src="../assets/guides/eldenring_guide.jpg" alt="Guía de Elden Ring" class="h-32 w-64 self-center"/>
                     <span class="absolute bottom-2 right-2 bg-red-300 border-2 border-red-600 rounded-lg px-2 py-1 text-red-900 font-bold text-lg shadow-lg">
@@ -84,7 +78,7 @@
                     </span>
                 </div>
                 <div id="content-guide-text" class="flex justify-center">
-                    <h3 class="text-white font-bold">Elden Ring: Secretos y Estrategias</h3>
+                    <h3 class="text-white font-bold">Elden Ring: items</h3>
                 </div>
             </a>
         </section>
