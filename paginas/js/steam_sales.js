@@ -3,31 +3,39 @@ document.addEventListener("DOMContentLoaded", async () => {
   section.innerHTML = "<p class='text-white'>Cargando ofertas...</p>";
 
   try {
-    // CheapShark API: Top 8 ofertas de Steam
-    const response = await fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=dealRating");
+    // Tu API propia
+    const response = await fetch("http://127.0.0.1:8000/api/v1/games/"); 
     const deals = await response.json();
 
     section.innerHTML = "";
     deals.forEach(deal => {
+      // Calculamos el precio con descuento
+      const precioFinal = (deal.price * (100 - deal.discount)) / 100;
+
       section.innerHTML += `
-        <a class="offer-card flex flex-col hover:scale-105 transition-transform relative" href="${deal.dealID ? `https://www.cheapshark.com/redirect?dealID=${deal.dealID}` : '#'}" target="_blank" title="${deal.title}">
+        <div class="offer-card flex flex-col hover:scale-105 transition-transform relative" 
+             title="${deal.name}">
           <div class="relative">
-            <img src="${deal.thumb}" alt="${deal.title}" class="h-32 w-64 self-center object-cover rounded-lg"/>
-            <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
-              ${Math.round(100 - (deal.salePrice / deal.normalPrice) * 100)}%
+            <img src="${deal.image}" alt="${deal.name}" 
+                 class="h-32 w-64 self-center object-cover rounded-lg"/>
+            <span class="absolute bottom-2 right-2 bg-yellow-300 border-2 border-yellow-600 
+                         rounded-lg px-2 py-1 text-red-600 font-bold text-lg shadow-lg">
+              ${deal.discount}%
             </span>
           </div>
           <div class="flex justify-center">
-            <h3 class="text-white font-bold text-center">${deal.title}</h3>
+            <h3 class="text-white font-bold text-center">${deal.name}</h3>
           </div>
           <div class="flex justify-center gap-2 mt-1">
-            <span class="text-green-400 font-bold">\$${deal.salePrice}</span>
-            <span class="text-gray-400 line-through">\$${deal.normalPrice}</span>
+            <span class="text-green-400 font-bold">\$${precioFinal.toFixed(2)}</span>
+            <span class="text-gray-400 line-through">\$${deal.price}</span>
           </div>
-        </a>
+          <p class="text-gray-300 text-sm mt-2 px-2 text-center">${deal.description}</p>
+        </div>
       `;
     });
   } catch (error) {
+    console.error(error);
     section.innerHTML = "<p class='text-red-500'>Error al cargar ofertas.</p>";
   }
 });
