@@ -6,21 +6,35 @@ function renderMonsters(monsters) {
     container.innerHTML = '<span class="text-white">No se encontraron monstruos.</span>';
     return;
   }
+
   container.innerHTML = '';
   monsters.forEach(monster => {
     const el = document.createElement('div');
     el.className = 'bg-white/80 rounded-lg shadow-lg p-4 w-80 flex flex-col gap-2';
+
     el.innerHTML = `
-      <h3 class="text-xl font-bold text-gray-900">${monster.name}</h3>
-      <p class="text-gray-700"><span class="font-semibold">Tipo:</span> ${monster.type || 'Desconocido'}</p>
-      <p class="text-gray-700"><span class="font-semibold">Descripción:</span> ${monster.description || 'Sin descripción.'}</p>
-      <p class="text-gray-700"><span class="font-semibold">Elementos:</span> ${(monster.elements && monster.elements.length > 0) ? monster.elements.join(', ') : 'Ninguno'}</p>
-      <p class="text-gray-700"><span class="font-semibold">Debilidades:</span> ${
-        (monster.weaknesses && monster.weaknesses.length > 0)
-          ? monster.weaknesses.map(w => w.element).join(', ')
-          : 'Ninguna'
-      }</p>
+      <div class="w-full flex justify-center mb-2">
+        <img
+          src="${monster.imagen || '../assets/placeholder-monster.png'}"
+          alt="${monster.nombre}"
+          class="w-24 h-24 object-contain"
+        />
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 text-center">${monster.nombre}</h3>
+
+      <p class="text-gray-700">
+        <span class="font-semibold">Tipo:</span>
+        ${monster.tipo || 'Desconocido'}
+      </p>
+
+      <p class="text-gray-700">
+        <span class="font-semibold">Elemento:</span>
+        ${monster.elemento || 'Desconocido'}
+      </p>
+
+      <p class="text-gray-500 text-sm">ID: ${monster.id_monster}</p>
     `;
+
     container.appendChild(el);
   });
 }
@@ -32,15 +46,16 @@ function getUnique(arr) {
 async function fetchMonsters() {
   const container = document.getElementById('monster-list');
   container.innerHTML = '<span class="text-white">Cargando...</span>';
+
   try {
-    const res = await fetch('https://mhw-db.com/monsters');
+    const res = await fetch('http://localhost:3000/monster');
     monstersData = await res.json();
 
-    // Poblar filtros
     const typeSelect = document.getElementById('filter-type');
     const elementSelect = document.getElementById('filter-element');
-    const types = getUnique(monstersData.map(m => m.type));
-    const elements = getUnique(monstersData.flatMap(m => m.elements));
+
+    const types = getUnique(monstersData.map(m => m.tipo));
+    const elements = getUnique(monstersData.map(m => m.elemento));
 
     types.forEach(type => {
       const opt = document.createElement('option');
@@ -58,6 +73,7 @@ async function fetchMonsters() {
 
     renderMonsters(monstersData);
   } catch (e) {
+    console.error(e);
     container.innerHTML = '<span class="text-red-400">Error al cargar los datos de monstruos.</span>';
   }
 }
@@ -67,10 +83,10 @@ function applyFilters() {
   const type = document.getElementById('filter-type').value;
   const element = document.getElementById('filter-element').value;
 
-  let filtered = monstersData.filter(monster => {
-    const matchName = monster.name.toLowerCase().includes(name);
-    const matchType = !type || monster.type === type;
-    const matchElement = !element || (monster.elements && monster.elements.includes(element));
+  const filtered = monstersData.filter(monster => {
+    const matchName = monster.nombre.toLowerCase().includes(name);
+    const matchType = !type || monster.tipo === type;
+    const matchElement = !element || monster.elemento === element;
     return matchName && matchType && matchElement;
   });
 
