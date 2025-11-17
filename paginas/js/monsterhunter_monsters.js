@@ -48,7 +48,7 @@ async function fetchMonsters() {
   container.innerHTML = '<span class="text-white">Cargando...</span>';
 
   try {
-    const res = await fetch('http://localhost:3000/monster');
+    const res = await fetch('http://localhost:3001/monster');
     monstersData = await res.json();
 
     const typeSelect = document.getElementById('filter-type');
