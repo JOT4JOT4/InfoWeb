@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             <span class="text-green-400 font-bold">\$${precioFinal.toFixed(2)}</span>
             <span class="text-gray-400 line-through">\$${deal.price}</span>
           </div>
-          <p class="text-gray-300 text-sm mt-2 px-2 text-center">${deal.description}</p>
         </div>
       `;
     });
